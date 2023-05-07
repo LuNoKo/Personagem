@@ -1,6 +1,6 @@
-import { Utils } from "./Utils";
+import { Utils } from "../utils/Utils";
 
-export default class PersonagemNew {
+export default class Personagem {
 
     private _nome: string
     private _armadura: number

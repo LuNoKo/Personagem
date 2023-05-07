@@ -1,7 +1,7 @@
-import PersonagemNew from "./PersonagemNew";
-import { Utils } from "./Utils";
+import Personagem from "./Personagem";
+import { Utils } from "../utils/Utils";
 
-export class Mage extends PersonagemNew{
+export class Mage extends Personagem{
 
     private _intelecto: number
     private _velocidade: number

@@ -1,7 +1,7 @@
-import PersonagemNew from "./PersonagemNew"
-import { Utils } from "./Utils"
+import Personagem from "./Personagem"
+import { Utils } from "../utils/Utils"
 
-export class Warrior extends PersonagemNew{
+export class Warrior extends Personagem{
 
     private _forca: number
     private _agilidade: number

@@ -1,9 +1,9 @@
 
-import { Mage } from "./Mage";
-import { Priest } from "./Priest";
-import { Warrior } from "./Warrior";
-import PersonagemOld from "./PersonagemOld";
-import PersonagemNew from "./PersonagemNew";
+import { Mage } from "./src/Mage";
+import { Priest } from "./src/Priest";
+import { Warrior } from "./src/Warrior";
+import PersonagemOld from "./src/Old/PersonagemOld";
+import Personagem from "./src/Personagem";
 import prompt from "prompt-sync";
 
 let personagem : PersonagemOld = new PersonagemOld("Sansa Stark", 100, 40, 20, 20)
@@ -55,9 +55,9 @@ if(personagem.isDead()){
     console.log('\n Ótimo! Até mais...\n')
 }
 
-let mage: PersonagemNew = new Mage("Lucas Mage")
-let warrior: PersonagemNew = new Warrior("Lucas Mage")
-let priest: PersonagemNew = new Priest("Lucas Mage")
+let mage: Personagem = new Mage("Lucas Mage")
+let warrior: Personagem = new Warrior("Lucas Mage")
+let priest: Personagem = new Priest("Lucas Mage")
 
 console.log(mage);
 console.log(warrior);
