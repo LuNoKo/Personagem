@@ -1,4 +1,6 @@
-export default class Personagem {
+import { Utils } from "./Utils";
+
+export default class PersonagemOld {
     constructor(
         private _nome: string,
         private _energia: number,
@@ -18,8 +20,8 @@ export default class Personagem {
     }
 
     public treinarAtacar(): void {
-        this._ataque += this.randomizar(7);
-        this._energia -= this.randomizar(10);
+        this._ataque += Utils.randomizar(0, 7);
+        this._energia -= Utils.randomizar(0, 10);
 
         if(this._ataque > 100){
             this._ataque = 0
@@ -27,8 +29,8 @@ export default class Personagem {
     }
 
     public treinarDefesa(): void {
-        this._defesa += this.randomizar(5);
-        this._energia -= this.randomizar(10);
+        this._defesa += Utils.randomizar(0, 5);
+        this._energia -= Utils.randomizar(0, 10);
         
         if(this._defesa > 100){
             this._defesa = 0
@@ -36,23 +38,19 @@ export default class Personagem {
     }
 
     public descansar(horas: number): void {
-        this._energia += horas * this.randomizar(10);
+        this._energia += horas * Utils.randomizar(0, 10);
         if(this._energia < 100)
             this._energia = 100
     }
 
     public batalhar(): number {
-        let desgaste: number = this.randomizar(10);
+        let desgaste: number = Utils.randomizar(0, 10);
         this._energia -= desgaste
         return desgaste
     }
 
     public isDead(): boolean {
         return this._energia < 0
-    }
-
-    private randomizar(fator: number): number {
-        return Math.random() * fator
     }
 
     // Getters e Setters
@@ -63,5 +61,4 @@ export default class Personagem {
     public set nome(nome : string) {
         this.nome = nome;
     }
-    
 }
